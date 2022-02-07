@@ -1,0 +1,43 @@
+# Helm Commands
+
+# Version
+helm version
+
+# List Charts
+helm list
+
+# Create Chart
+helm create CHART_NAME
+
+# Verfiy folders
+tree CHART_NAME
+tree /a CHART_NAME
+
+# Verfiy Files & Folders
+tree /f CHART_NAME
+
+# Deployment Details
+helm template CHART_NAME
+
+# Chart Deployment Details
+helm lint CHART_NAME
+
+# Test the application before deploying
+helm install RELEASE_NAME --debug --dry-run CHART_NAME
+
+# Actaul Charts Release [Can create n. release for same chart]
+helm install RELEASE_NAME CHART_NAME
+
+# Verify Charts
+helm list
+helm list -a 
+
+# Upgrade Chart
+helm upgrade RELEASE_NAME CHART_NAME
+
+# Rollback Release [DANGEROUS]
+helm rollback CHART_NAME REVISION
+
+# Delete Release [DANGEROUS]
+helm delete CHART_NAME
+
